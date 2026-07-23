@@ -23,7 +23,15 @@
       "entity_id": "MS-000001",
       "entity_type": "milestone",
       "timestamp": "2026-01-23T10:45:00Z"
+    },
+    {
+      "id": "TLE-000004",
+      "title": "Deployment Process Documented",
+      "description": "Created DOC-000003 documenting complete deployment process for development, staging, and production",
+      "entity_id": "DOC-000003",
+      "entity_type": "document",
+      "timestamp": "2026-01-23T11:00:00Z"
     }
   ],
-  "next_id": 4
+  "next_id": 6
 }
