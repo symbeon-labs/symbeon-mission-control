@@ -1,0 +1,19 @@
+{
+  "name": "symbeon-mission-control",
+  "version": "0.1.0",
+  "description": "Operational Development System - From Idea to Evidence",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "build": "echo 'Build step to be implemented in Phase 2'"
+  },
+  "keywords": [
+    "operational-development",
+    "governance",
+    "traceability",
+    "knowledge-management",
+    "mission-control"
+  ],
+  "author": "Symbeon Labs",
+  "license": "MIT"
+}

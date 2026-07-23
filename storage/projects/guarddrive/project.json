@@ -1,0 +1,31 @@
+{
+  "id": "PRJ-000001",
+  "name": "GuardDrive",
+  "slug": "guarddrive",
+  "status": "active",
+  "mission": "Transformar movimento em evidência verificável para mobilidade conectada.",
+  "vision": "Tornar-se a camada de confiança operacional padrão para toda mobilidade conectada global.",
+  "created_at": "2026-01-15T00:00:00Z",
+  "updated_at": "2026-01-15T00:00:00Z",
+  "roadmap": [],
+  "stakeholders": [],
+  "timeline": [],
+  "releases": [],
+  "knowledge": [],
+  "governance": {
+    "structure": {},
+    "policies": []
+  },
+  "commercial": {
+    "model": "B2B",
+    "pricing_tiers": []
+  },
+  "legal": {
+    "documents": [],
+    "contracts": []
+  },
+  "research": {
+    "findings": [],
+    "experiments": []
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symbeon Mission Control - Operational Development System</title>
+  <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <span class="logo-icon">SMC</span>
+          <span class="logo-text">Mission Control</span>
+        </div>
+      </div>
+      
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Core</div>
+        <a href="#dashboard" class="nav-link active" data-module="dashboard">
+          <span class="nav-icon">📊</span>
+          <span class="nav-text">Dashboard</span>
+        </a>
+        <a href="#timeline" class="nav-link" data-module="timeline">
+          <span class="nav-icon">📅</span>
+          <span class="nav-text">Timeline</span>
+        </a>
+        <a href="#milestones" class="nav-link" data-module="milestones">
+          <span class="nav-icon">🎯</span>
+          <span class="nav-text">Milestones</span>
+        </a>
+        <a href="#tasks" class="nav-link" data-module="tasks">
+          <span class="nav-icon">✅</span>
+          <span class="nav-text">Tasks</span>
+        </a>
+        <a href="#stakeholders" class="nav-link" data-module="stakeholders">
+          <span class="nav-icon">👥</span>
+          <span class="nav-text">Stakeholders</span>
+        </a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Governance</div>
+        <a href="#governance" class="nav-link" data-module="governance">
+          <span class="nav-icon">⚖️</span>
+          <span class="nav-text">Governance</span>
+        </a>
+        <a href="#decisions" class="nav-link" data-module="decisions">
+          <span class="nav-icon">📝</span>
+          <span class="nav-text">Decision Log</span>
+        </a>
+        <a href="#approvals" class="nav-link" data-module="approvals">
+          <span class="nav-icon">✓</span>
+          <span class="nav-text">Approvals</span>
+        </a>
+        <a href="#risk" class="nav-link" data-module="risk">
+          <span class="nav-icon">⚠️</span>
+          <span class="nav-text">Risk</span>
+        </a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Knowledge</div>
+        <a href="#knowledge" class="nav-link" data-module="knowledge">
+          <span class="nav-icon">📚</span>
+          <span class="nav-text">Knowledge Base</span>
+        </a>
+        <a href="#documents" class="nav-link" data-module="documents">
+          <span class="nav-icon">📄</span>
+          <span class="nav-text">Documents</span>
+        </a>
+        <a href="#evidence" class="nav-link" data-module="evidence">
+          <span class="nav-icon">🔍</span>
+          <span class="nav-text">Evidence</span>
+        </a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Operations</div>
+        <a href="#releases" class="nav-link" data-module="releases">
+          <span class="nav-icon">🚀</span>
+          <span class="nav-text">Releases</span>
+        </a>
+        <a href="#meetings" class="nav-link" data-module="meetings">
+          <span class="nav-icon">💬</span>
+          <span class="nav-text">Meetings</span>
+        </a>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="project-selector">
+          <label for="project-select">Project</label>
+          <select id="project-select">
+            <option value="guarddrive">GuardDrive</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="top-bar">
+        <div class="top-bar-left">
+          <button class="sidebar-toggle" id="sidebar-toggle">☰</button>
+          <h1 class="page-title" id="page-title">Dashboard</h1>
+        </div>
+        <div class="top-bar-right">
+          <span class="breadcrumb" id="breadcrumb">GuardDrive / Dashboard</span>
+        </div>
+      </header>
+
+      <div class="content-area" id="content-area">
+        <!-- Dynamic content loaded here -->
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="src/js/app.js"></script>
+</body>
+</html>
