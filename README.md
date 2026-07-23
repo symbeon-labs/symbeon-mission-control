@@ -2,228 +2,272 @@
 
 **Operational Development System**
 
-*From Idea to Evidence.*
+*Transform every operational action into institutional knowledge.*
 
 ---
 
-## Missão
+## Mission
 
-Transformar conhecimento disperso em desenvolvimento operacional estruturado.
+Transform every operational action into institutional knowledge.
 
-Registrar toda decisão.
-Registrar toda entrega.
-Registrar toda evolução.
-Registrar toda evidência.
-Criar uma memória institucional permanente.
+Every action must become:
 
----
+**Decision → Evidence → Knowledge → Governance → History → Institutional Asset**
 
-## Filosofia
+The Mission Control must become the operating system that manages the complete lifecycle of complex technology projects.
 
-**Nenhuma decisão importante deve existir apenas em mensagens.**
-**Nenhuma entrega deve ficar sem rastreabilidade.**
-**Nenhuma versão deve ser perdida.**
+**Projects are not collections of tasks. Projects are living operational systems.**
 
-Todo projeto deve poder responder: **Como chegamos até aqui?**
+The Mission Control is responsible for documenting their evolution.
 
 ---
 
-## Princípios
+## Core Principle
 
-- **Evidence First** - Evidência como base de todas as decisões
-- **Governance by Design** - Governança incorporada desde o início
-- **Knowledge as Asset** - Conhecimento tratado como ativo institucional
-- **Operational Traceability** - Rastreabilidade completa de todas as ações
-- **Incremental Development** - Desenvolvimento incremental e documentado
-- **Institutional Memory** - Memória institucional permanente
-- **Decision Logging** - Registro sistemático de decisões
-- **Document Versioning** - Versionamento rigoroso de documentos
-- **Milestone Driven Development** - Desenvolvimento orientado a milestones
+**Nothing exists until evidence exists.**
+
+Every operational action must generate at least one evidence object.
+
+**Meeting → Minutes → Decision → Task → Milestone → Document → Release → Historical Record**
+
+If this chain is broken, the system is incomplete.
 
 ---
 
-## O que é Symbeon Mission Control?
+## Information Model
 
-**Não é uma ferramenta de gerenciamento de tarefas.**
+### OperationalObject Base Structure
 
-É um **Sistema Operacional de Desenvolvimento** para projetos tecnológicos complexos.
+Every object in the system inherits the same foundation:
 
-Não compete com Jira, Notion, Linear ou GitHub Projects.
-
-Ele se posiciona em outra camada: a camada de **memória institucional, governança e rastreabilidade do desenvolvimento**.
-
----
-
-## Módulos
-
-### Core
-- **Dashboard** - Visão geral do projeto
-- **Timeline** - Timeline cronológica permanente
-- **Milestones** - Marcos de entrega com critérios de aceite
-- **Tasks** - Tarefas com dependências e rastreabilidade
-- **Stakeholders** - Gestão de partes interessadas
-
-### Governance
-- **Governance** - Estrutura de governança do projeto
-- **Decision Log** - Registro de todas as decisões
-- **Approvals** - Sistema de aprovações
-- **Risk** - Gestão de riscos
-
-### Knowledge
-- **Knowledge Base** - Base de conhecimento estruturada
-- **Knowledge Graph** - Grafo de relacionamentos entre entidades
-- **Documents** - Gestão de documentos com versionamento
-- **Evidence** - Registro de evidências operacionais
-
-### Operations
-- **Releases** - Gestão de releases e versionamento
-- **Meetings** - Registro de reuniões e atas
-- **Legal** - Gestão de documentos legais
-- **Commercial** - Gestão comercial e contratos
-
-### Research
-- **Research** - Registro de pesquisas e descobertas
-- **Architecture** - Documentação de arquitetura
-- **Metrics** - Métricas e KPIs
-
----
-
-## Sistema de IDs
-
-Cada entidade possui um ID único:
-
-- **TASK-000001** - Tarefas
-- **MS-000014** - Milestones
-- **DOC-000087** - Documentos
-- **DEC-000011** - Decisões
-- **REL-000003** - Releases
-- **EVD-000321** - Evidências
-- **STK-000005** - Stakeholders
-- **RISK-000012** - Riscos
-- **MTG-000023** - Reuniões
-- **APR-000008** - Aprovações
-
----
-
-## Estrutura de Dados
-
-### Documento
-```json
-{
-  "id": "DOC-000087",
-  "title": "Especificação Técnica v1.0",
-  "category": "architecture",
-  "version": "1.0",
-  "status": "approved",
-  "author": "user-id",
-  "responsible": "user-id",
-  "project": "guarddrive",
-  "dependencies": ["DOC-000086"],
-  "relationships": ["DEC-000011", "MS-000014"],
-  "history": [...]
+```javascript
+OperationalObject {
+  id
+  title
+  description
+  owner
+  project
+  status
+  version
+  created
+  updated
+  relations
+  dependencies
+  evidence
+  history
+  metadata
 }
 ```
 
-### Tarefa
-```json
-{
-  "id": "TASK-000001",
-  "status": "in_progress",
-  "responsible": "user-id",
-  "category": "development",
-  "dependencies": ["TASK-000000"],
-  "checklist": [...],
-  "documents": ["DOC-000087"],
-  "milestone": "MS-000014",
-  "date": "2026-01-15",
-  "impact": "high"
-}
-```
-
-### Milestone
-```json
-{
-  "id": "MS-000014",
-  "objective": "Entrega do MVP",
-  "acceptance_criteria": [...],
-  "dependencies": ["MS-000013"],
-  "documents": ["DOC-000087"],
-  "evidence": ["EVD-000321"],
-  "deliverables": [...]
-}
-```
-
-### Projeto
-```json
-{
-  "id": "PRJ-000001",
-  "name": "GuardDrive",
-  "mission": "...",
-  "vision": "...",
-  "roadmap": [...],
-  "stakeholders": ["STK-000005"],
-  "timeline": [...],
-  "releases": ["REL-000003"],
-  "knowledge": [...],
-  "governance": {...},
-  "commercial": {...},
-  "legal": {...},
-  "research": [...]
-}
-```
+All modules extend this base object:
+- Task
+- Decision
+- Evidence
+- Document
+- Meeting
+- Release
+- Risk
+- Approval
+- Milestone
+- Stakeholder
+- Knowledge
 
 ---
 
-## Arquitetura
+## Graph-Based Architecture
 
-### Fase 1 (Atual)
-- HTML
-- CSS
-- JavaScript
-- JSON
+Objects do not live isolated. Everything is connected.
 
-### Fase 2 (Futura)
-- React
-- NextJS
-- Electron
-- API
-- Banco de Dados
-- Multiusuário
+**Decision** creates **Task**  
+**Task** belongs to **Milestone**  
+**Milestone** belongs to **Release**  
+**Release** contains **Evidence**  
+**Evidence** references **Document**  
+**Document** references **Decision**
 
----
-
-## Projeto Zero: GuardDrive™
-
-GuardDrive é o primeiro projeto operado pelo Symbeon Mission Control (Dogfooding).
-
-Toda melhoria realizada durante o desenvolvimento do GuardDrive retroalimenta o próprio Mission Control.
-
-Objetivo: Ao final, Mission Control tornar-se um framework reutilizável para qualquer iniciativa tecnológica futura.
+Every object must display:
+- Incoming relations
+- Outgoing relations
+- Dependency graph
+- Historical graph
 
 ---
 
-## Perguntas Fundamentais
+## Navigation Structure
 
-Toda funcionalidade deve responder pelo menos uma destas perguntas:
+Navigation represents how organizations operate, not how databases store data.
 
-- O que foi feito?
-- Quem fez?
-- Quando foi feito?
-- Por que foi feito?
-- Onde está documentado?
-- Qual decisão originou isso?
-- Qual documento comprova?
-- Qual release entregou?
-- Qual projeto utiliza?
+- **Mission** - Organizational mission and vision
+- **Projects** - Living operational systems
+- **Operations** - Day-to-day operational actions
+- **Governance** - Decision making and approvals
+- **Knowledge** - Captured institutional learning
+- **Evidence** - All evidence objects
+- **Analytics** - Organizational maturity metrics
+- **Administration** - System configuration
 
 ---
 
-## Licença
+## Project Health
 
-MIT License - Symbeon Labs
+Dashboard measures organizational maturity, not object counts.
+
+**Indicators:**
+- Governance
+- Commercial
+- Product
+- Knowledge
+- Evidence
+- Documentation
+- Execution
+- Validation
+- Risk
+
+Each indicator is automatically calculated from operational data.
+
+---
+
+## Timeline as Institutional Memory
+
+Timeline is not a log. Timeline is institutional memory.
+
+Every event receives:
+- Timestamp
+- Actor
+- Related Objects
+- Evidence
+- Impact
+- Category
+
+Timeline becomes the history of the company.
+
+---
+
+## Evidence Engine
+
+Evidence is the heart of the platform.
+
+**Evidence Types:**
+- Document
+- Meeting
+- Contract
+- Image
+- Commit
+- Pull Request
+- Deployment
+- Video
+- Presentation
+- PDF
+- Release
+
+Evidence must always point to operational objects.
+
+---
+
+## Knowledge Engine
+
+Every completed task asks: **What was learned?**
+
+Knowledge becomes searchable.
+Knowledge generates templates.
+Templates improve future projects.
+Projects improve the framework.
+The framework improves future projects.
+
+---
+
+## Automatic Reports
+
+Generated directly from operational data:
+
+- Executive Snapshot
+- Weekly Report
+- Monthly Report
+- Baseline Report
+- Risk Report
+- Governance Report
+- Commercial Report
+- Knowledge Report
+- Deployment Report
+
+---
+
+## Automation
+
+**Creating a Decision automatically suggests:**
+- Task
+- Milestone
+- Timeline Event
+- Evidence
+- Release
+
+**Creating a Meeting automatically suggests:**
+- Minutes
+- Decision
+- Knowledge
+- Evidence
+
+Nothing should require repetitive work.
+
+---
+
+## User Experience
+
+The user should feel like operating a Mission Control, not filling forms.
+
+- Reduce clicks
+- Reduce friction
+- Increase contextual information
+- Show relations instead of lists
+
+---
+
+## Long-Term Goal
+
+The Mission Control must become the operational memory of the organization.
+
+The software should answer instantly:
+- Why was this built?
+- Who approved it?
+- Which decision created it?
+- Which evidence proves it?
+- Which release delivered it?
+- Which project uses it?
+- Which knowledge emerged?
+
+---
+
+## Dogfooding
+
+GuardDrive remains Project Zero.
+
+Every improvement made while developing GuardDrive must improve Mission Control itself.
+
+**Mission Control is the product. GuardDrive is its first operational experiment.**
+
+---
+
+## Non-Negotiable Principles
+
+1. **Evidence First** - Nothing exists until evidence exists
+2. **Governance by Design** - Governance incorporated from the start
+3. **Operational Traceability** - Complete traceability of all actions
+4. **Institutional Memory** - Permanent institutional memory
+5. **Knowledge as an Asset** - Knowledge treated as institutional asset
+6. **Decision Logging** - Systematic decision recording
+7. **Graph Relationships** - Everything is connected
+8. **Automation First** - Automate repetitive work
+9. **Operational Simplicity** - Reduce friction
+10. **Long-term Scalability** - Optimize for operational intelligence
+
+---
+
+## The Mission Control is not software.
+
+**It is the computational representation of how an organization learns, decides, builds and evolves.**
 
 ---
 
 ## Status
 
-🚧 Em desenvolvimento - Fase 1 (HTML/CSS/JS/JSON)
+🚧 **Phase 2: Architectural Evolution** - Moving to OperationalObject-based, graph-driven architecture
