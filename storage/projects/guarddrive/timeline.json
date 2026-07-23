@@ -1,4 +1,29 @@
 {
-  "events": [],
-  "next_id": 1
+  "events": [
+    {
+      "id": "TLE-000001",
+      "title": "Infrastructure Skill Definition Created",
+      "description": "Created DOC-000001 defining Mission Control Infrastructure Skill/EAP/TaskMash SuperScope",
+      "entity_id": "DOC-000001",
+      "entity_type": "document",
+      "timestamp": "2026-01-23T10:45:00Z"
+    },
+    {
+      "id": "TLE-000002",
+      "title": "Infrastructure Tasks Created",
+      "description": "Created 6 infrastructure tasks (TASK-000001 to TASK-000006) for Skill, EAP, and TaskMash implementation",
+      "entity_id": "TASK-000001",
+      "entity_type": "task",
+      "timestamp": "2026-01-23T10:45:00Z"
+    },
+    {
+      "id": "TLE-000003",
+      "title": "Infrastructure Milestones Defined",
+      "description": "Created 2 milestones (MS-000001, MS-000002) for infrastructure foundation and layer implementation",
+      "entity_id": "MS-000001",
+      "entity_type": "milestone",
+      "timestamp": "2026-01-23T10:45:00Z"
+    }
+  ],
+  "next_id": 4
 }

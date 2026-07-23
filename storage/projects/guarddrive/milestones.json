@@ -1,4 +1,47 @@
 {
-  "milestones": [],
-  "next_id": 1
+  "milestones": [
+    {
+      "id": "MS-000001",
+      "objective": "Infrastructure Foundation - Skill/EAP/TaskMash SuperScope",
+      "acceptance_criteria": [
+        "Skill definition documented and approved",
+        "EAP components configured",
+        "TaskMash SuperScope implemented",
+        "All foundation tasks completed"
+      ],
+      "dependencies": [],
+      "documents": ["DOC-000001"],
+      "evidence": [],
+      "deliverables": [
+        "Infrastructure skill definition",
+        "EAP configuration documentation",
+        "TaskMash SuperScope implementation"
+      ],
+      "target_date": "2026-01-30T00:00:00Z",
+      "status": "in_progress",
+      "created_at": "2026-01-23T10:45:00Z"
+    },
+    {
+      "id": "MS-000002",
+      "objective": "Infrastructure Layers Implementation",
+      "acceptance_criteria": [
+        "Application layer monitoring active",
+        "Data layer backup configured",
+        "Security layer implemented",
+        "All layer tasks completed"
+      ],
+      "dependencies": ["MS-000001"],
+      "documents": ["DOC-000001"],
+      "evidence": [],
+      "deliverables": [
+        "Monitoring dashboard",
+        "Backup system",
+        "Security controls"
+      ],
+      "target_date": "2026-02-15T00:00:00Z",
+      "status": "pending",
+      "created_at": "2026-01-23T10:45:00Z"
+    }
+  ],
+  "next_id": 3
 }

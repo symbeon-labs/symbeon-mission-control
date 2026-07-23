@@ -1,4 +1,121 @@
 {
-  "tasks": [],
-  "next_id": 1
+  "tasks": [
+    {
+      "id": "TASK-000001",
+      "title": "Define Mission Control Infrastructure Skill",
+      "status": "completed",
+      "responsible": "system",
+      "category": "infrastructure",
+      "dependencies": [],
+      "checklist": [
+        { "item": "Define skill capabilities", "completed": true },
+        { "item": "Establish skill level (SuperScope)", "completed": true },
+        { "item": "Document skill requirements", "completed": true }
+      ],
+      "documents": ["DOC-000001"],
+      "milestone": "MS-000001",
+      "date": "2026-01-23T10:45:00Z",
+      "impact": "high",
+      "created_at": "2026-01-23T10:45:00Z"
+    },
+    {
+      "id": "TASK-000002",
+      "title": "Configure EAP components",
+      "status": "in_progress",
+      "responsible": "system",
+      "category": "infrastructure",
+      "dependencies": ["TASK-000001"],
+      "checklist": [
+        { "item": "Define environment tiers (Production/Staging/Development)", "completed": true },
+        { "item": "Set up CI/CD pipeline", "completed": false },
+        { "item": "Implement infrastructure as code", "completed": false },
+        { "item": "Document deployment procedures", "completed": false },
+        { "item": "Create incident response process", "completed": false },
+        { "item": "Establish change management process", "completed": false }
+      ],
+      "documents": ["DOC-000001"],
+      "milestone": "MS-000001",
+      "date": "2026-01-23T10:45:00Z",
+      "impact": "high",
+      "created_at": "2026-01-23T10:45:00Z"
+    },
+    {
+      "id": "TASK-000003",
+      "title": "Implement TaskMash SuperScope",
+      "status": "pending",
+      "responsible": "system",
+      "category": "infrastructure",
+      "dependencies": ["TASK-000001", "TASK-000002"],
+      "checklist": [
+        { "item": "Define infrastructure layers", "completed": false },
+        { "item": "Map tasks to layers", "completed": false },
+        { "item": "Create cross-layer dependency tracking", "completed": false },
+        { "item": "Implement unified task dashboard", "completed": false }
+      ],
+      "documents": ["DOC-000001"],
+      "milestone": "MS-000001",
+      "date": "2026-01-23T10:45:00Z",
+      "impact": "high",
+      "created_at": "2026-01-23T10:45:00Z"
+    },
+    {
+      "id": "TASK-000004",
+      "title": "Set up application layer monitoring",
+      "status": "pending",
+      "responsible": "system",
+      "category": "monitoring",
+      "dependencies": ["TASK-000002"],
+      "checklist": [
+        { "item": "Configure application logging", "completed": false },
+        { "item": "Set up error tracking", "completed": false },
+        { "item": "Implement performance metrics", "completed": false },
+        { "item": "Create alerting rules", "completed": false }
+      ],
+      "documents": ["DOC-000001"],
+      "milestone": "MS-000002",
+      "date": "2026-01-23T10:45:00Z",
+      "impact": "medium",
+      "created_at": "2026-01-23T10:45:00Z"
+    },
+    {
+      "id": "TASK-000005",
+      "title": "Configure data layer backup",
+      "status": "pending",
+      "responsible": "system",
+      "category": "infrastructure",
+      "dependencies": ["TASK-000002"],
+      "checklist": [
+        { "item": "Implement automated JSON backups", "completed": false },
+        { "item": "Set up backup retention policy", "completed": false },
+        { "item": "Test restore procedures", "completed": false },
+        { "item": "Document backup process", "completed": false }
+      ],
+      "documents": ["DOC-000001"],
+      "milestone": "MS-000002",
+      "date": "2026-01-23T10:45:00Z",
+      "impact": "high",
+      "created_at": "2026-01-23T10:45:00Z"
+    },
+    {
+      "id": "TASK-000006",
+      "title": "Implement security layer",
+      "status": "pending",
+      "responsible": "system",
+      "category": "security",
+      "dependencies": ["TASK-000002"],
+      "checklist": [
+        { "item": "Define authentication requirements", "completed": false },
+        { "item": "Implement authorization model", "completed": false },
+        { "item": "Set up access control", "completed": false },
+        { "item": "Configure security headers", "completed": false },
+        { "item": "Implement audit logging", "completed": false }
+      ],
+      "documents": ["DOC-000001"],
+      "milestone": "MS-000002",
+      "date": "2026-01-23T10:45:00Z",
+      "impact": "high",
+      "created_at": "2026-01-23T10:45:00Z"
+    }
+  ],
+  "next_id": 7
 }
