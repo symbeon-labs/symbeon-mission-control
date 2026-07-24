@@ -268,6 +268,11 @@ Every improvement made while developing GuardDrive must improve Mission Control 
 
 ---
 
-## Status
+## Roadmap & Status
 
-🚧 **Phase 2: Architectural Evolution** - Moving to OperationalObject-based, graph-driven architecture
+✅ **Phase 1: Foundation** - Basic static UI, project storage, and JSON flat loading.
+✅ **Phase 2: Architectural Evolution** - Implementation of `OperationalObject` base class for strict data consistency.
+✅ **Phase 3: Operational Graph Engine** - Implementation of `GraphManager` for relationship indexing, dependency traversal, and impact analysis.
+✅ **Phase 4: Computable Governance** - Implementation of `PolicyEngine`, continuous compliance scoring, Maturity Model, and the `LiveGovernance` dashboard widget.
+🚧 **Phase 5: Agentic Hub & MCP** - Converting Mission Control into an MCP (Model Context Protocol) Server to allow AI Agents to programmatically query the graph, resolve ALM violations, and attach evidence.
+⏳ **Phase 6: External Integrations & Deep Analytics** - Automatic hooks to GitHub/Jira to create evidence objects on commits/PRs, and deep graph visualization rendering.
