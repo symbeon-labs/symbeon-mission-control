@@ -79,7 +79,67 @@
       "status": "verified",
       "confidenceScore": 100,
       "created_at": "2026-07-24T15:00:00Z"
+    },
+    {
+      "id": "EVD-000009",
+      "title": "Guia Completo GuardDrive SDK",
+      "type": "Document",
+      "sourceUrl": "guarddrive/guardrive-core/GUIA_COMPLETO_SDK.md",
+      "targetObjectId": "TASK-000011",
+      "status": "verified",
+      "confidenceScore": 100,
+      "created_at": "2026-07-24T15:15:00Z"
+    },
+    {
+      "id": "EVD-000010",
+      "title": "GuardDrive Market Architecture Complete",
+      "type": "Document",
+      "sourceUrl": "guarddrive/guardrive-core/GuardDrive_Market_Architecture_Complete.md",
+      "targetObjectId": "TASK-000011",
+      "status": "verified",
+      "confidenceScore": 100,
+      "created_at": "2026-07-24T15:15:00Z"
+    },
+    {
+      "id": "EVD-000011",
+      "title": "Relatório de Implementação ESG Concluída",
+      "type": "Document",
+      "sourceUrl": "guarddrive/guardrive-core/IMPLEMENTACAO_ESG_CONCLUIDA.md",
+      "targetObjectId": "TASK-000012",
+      "status": "verified",
+      "confidenceScore": 100,
+      "created_at": "2026-07-24T15:15:00Z"
+    },
+    {
+      "id": "EVD-000012",
+      "title": "Validação de Teste ESG Carbon Credits",
+      "type": "Document",
+      "sourceUrl": "guarddrive/guardrive-core/test_esg_implementation.py",
+      "targetObjectId": "TASK-000012",
+      "status": "verified",
+      "confidenceScore": 100,
+      "created_at": "2026-07-24T15:15:00Z"
+    },
+    {
+      "id": "EVD-000013",
+      "title": "GuardFlow DocSync Architectural Guide",
+      "type": "Document",
+      "sourceUrl": "guarddrive/guardrive-core/EAP_GUARDFLOW.md",
+      "targetObjectId": "TASK-000013",
+      "status": "verified",
+      "confidenceScore": 100,
+      "created_at": "2026-07-24T15:15:00Z"
+    },
+    {
+      "id": "EVD-000014",
+      "title": "GuardFlow Notion Sync Setup Engine",
+      "type": "Document",
+      "sourceUrl": "guarddrive/guardrive-core/guardflow-docsync-setup.py",
+      "targetObjectId": "TASK-000013",
+      "status": "verified",
+      "confidenceScore": 100,
+      "created_at": "2026-07-24T15:15:00Z"
     }
   ],
-  "next_id": 9
+  "next_id": 15
 }

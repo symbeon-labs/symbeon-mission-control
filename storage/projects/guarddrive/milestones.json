@@ -119,7 +119,64 @@
       "target_date": "2026-09-15T00:00:00Z",
       "status": "in_progress",
       "created_at": "2026-07-24T15:00:00Z"
+    },
+    {
+      "id": "MS-000007",
+      "objective": "GuardDrive SDK & MCP Hardware-Software Core Engine",
+      "acceptance_criteria": [
+        "SDK Core & documentação de integração (GUIA_COMPLETO_SDK.md)",
+        "Arquitetura de mercado completa (GuardDrive_Market_Architecture_Complete.md)",
+        "GuardPass Auth & Módulo MCP operacionais"
+      ],
+      "dependencies": ["MS-000001"],
+      "documents": ["DOC-000006"],
+      "evidence": ["EVD-000009", "EVD-000010"],
+      "deliverables": [
+        "GUARDRIVE-SDK & GUARDRIVE-MCP",
+        "GuardDrive_Market_Architecture_Complete.md"
+      ],
+      "target_date": "2026-09-30T00:00:00Z",
+      "status": "in_progress",
+      "created_at": "2026-07-24T15:15:00Z"
+    },
+    {
+      "id": "MS-000008",
+      "objective": "L4 ESG Tokenization & Carbon Attestation Framework",
+      "acceptance_criteria": [
+        "Módulo ESG implementado e testado (test_esg_implementation.py)",
+        "Relatório de implementação ESG validado",
+        "Atestação de créditos de carbono de mobilidade"
+      ],
+      "dependencies": ["MS-000007"],
+      "documents": ["DOC-000007"],
+      "evidence": ["EVD-000011", "EVD-000012"],
+      "deliverables": [
+        "IMPLEMENTACAO_ESG_CONCLUIDA.md",
+        "test_esg_implementation.py"
+      ],
+      "target_date": "2026-10-15T00:00:00Z",
+      "status": "in_progress",
+      "created_at": "2026-07-24T15:15:00Z"
+    },
+    {
+      "id": "MS-000009",
+      "objective": "GuardFlow DocSync & Notion Governance Synchronization",
+      "acceptance_criteria": [
+        "Engine GuardFlow DocSync (guardflow-docsync-setup.py)",
+        "Sincronização bidirecional com Notion (guardflow-notion-sync.py)",
+        "Guia completo de integração Notion/ERP"
+      ],
+      "dependencies": ["MS-000007"],
+      "documents": ["DOC-000008"],
+      "evidence": ["EVD-000013", "EVD-000014"],
+      "deliverables": [
+        "guardflow-docsync-setup.py & guardflow-notion-sync.py",
+        "EAP_GUARDFLOW.md"
+      ],
+      "target_date": "2026-10-30T00:00:00Z",
+      "status": "in_progress",
+      "created_at": "2026-07-24T15:15:00Z"
     }
   ],
-  "next_id": 7
+  "next_id": 10
 }
