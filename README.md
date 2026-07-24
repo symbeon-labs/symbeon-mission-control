@@ -1,8 +1,8 @@
 # Symbeon Mission Control
 
-**The Computable Organization Platform**
+**Making Organizations Computable.**
 
-> *The Reference Platform for Computable Organizations powered by the Mission Control Specification (MCS).*
+> *The Reference Implementation for Computable Organizations powered by the Mission Control Specification (MCS).*
 
 ![Symbeon Mission Control Hero](docs/images/mission_control_hero.png)
 

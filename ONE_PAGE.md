@@ -1,8 +1,8 @@
 # Symbeon Mission Control
 
-## **The Computable Organization Platform**
+## **Making Organizations Computable.**
 
-> *The Reference Platform for Computable Organizations powered by the Mission Control Specification (MCS).*
+> *Powered by the Mission Control Specification (MCS).*
 
 📥 **[Download PDF Version (Symbeon_Mission_Control_Executive_OnePager.pdf)](docs/pdf/Symbeon_Mission_Control_Executive_OnePager.pdf)** | 🌐 **[View Interactive Presentation (one_pager_presentation.html)](docs/pdf/one_pager_presentation.html)**
 
@@ -10,13 +10,21 @@
 
 ## 🚀 Executive Summary
 
-**Symbeon Mission Control** is the reference platform for **Computable Organizations**.
+**Symbeon Mission Control** is the reference platform for **Computable Organizations**, implementing the open **Mission Control Specification (MCS)**.
 
 Rather than treating organizations as disconnected tasks, documents, or ticket queues, Mission Control models operational reality as a **Directed Operational Graph** composed of **Operational Objects**, relationships, verifiable evidence, executable policies and institutional knowledge.
 
-Built upon the **Mission Control Specification (MCS)**, the platform transforms operational execution into permanent organizational intelligence through deterministic governance, cryptographic evidence lineage and policy-driven decision making.
+The platform transforms operational execution into permanent organizational intelligence through deterministic governance, cryptographic evidence lineage and policy-driven decision making.
 
 **Evidence Precedes Truth.**
+
+---
+
+## 📐 Operational Reality Pipeline
+
+```text
+Reality ──> Operational Objects ──> Evidence ──> Knowledge ──> Governance ──> Agents ──> Institutional Memory
+```
 
 ---
 
@@ -41,15 +49,19 @@ No operational state exists without verifiable evidence.
 
 ---
 
-## 📚 Mission Control Specification (MCS)
+## 📚 Mission Control Specification Stack (MCS)
 
-| Layer | Specification | Purpose |
-| :--- | :--- | :--- |
-| **Scientific Foundation** | `MCS-1000` | Computational Organization Theory |
-| **Manifesto** | `MCS-0000` | Mission, Philosophy and Normative Axioms |
-| **Normative Specifications** | `MCS-0001` → `MCS-0004` | Architecture, Ontology, State Machine and Protocol |
-| **Domain Specifications** | `MCS-0005` → `MCS-0010` | Evidence, Knowledge, Graph, Governance, Agents and SDK |
-| **Evolution Process** | `RFC-0000` | Normative evolution of the specification |
+```text
+FOUNDATION    ➜  MCS-1000        (Computational Organization Theory)
+   ↓
+MISSION       ➜  MCS-0000        (Mission, Philosophy and Normative Axioms)
+   ↓
+CONSTITUTION  ➜  MCS-0001 → 0004 (Architecture Laws, Ontology, State Machine & Protocol)
+   ↓
+DOMAIN        ➜  MCS-0005 → 0010 (Evidence, Knowledge, Graph, Governance, Agents & SDK)
+   ↓
+EVOLUTION     ➜  RFC-0000        (Normative RFC Evolution Process)
+```
 
 ---
 
@@ -57,15 +69,25 @@ No operational state exists without verifiable evidence.
 
 - **`11`** — Normative Specifications
 - **`RFC 2119`** — Normative Language Compliance
-- **`MCS`** — Reference Architecture
+- **`MCS`** — Open Specification Standard
 - **`Graph`** — Computable Organization
 
 ---
 
-## 📍 Footer
+## 📍 Hierarchy & Product Positioning
+
+```text
+MCS (The Standard)
+   ↓
+Mission Control (Reference Implementation)
+   ↓
+GuardDrive (Application / Experiment Zero)
+   ↓
+Future Products & Third-Party Applications
+```
 
 **Symbeon Mission Control**  
-The Reference Platform for Computable Organizations  
+The Reference Implementation for Computable Organizations  
 Powered by the Mission Control Specification (MCS)  
 Version 1.0  
 [https://github.com/symbeon-labs/symbeon-mission-control](https://github.com/symbeon-labs/symbeon-mission-control)

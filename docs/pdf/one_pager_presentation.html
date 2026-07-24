@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Symbeon Mission Control — The Computable Organization Platform</title>
+  <title>Symbeon Mission Control — Making Organizations Computable</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,6 +13,7 @@
       --card-bg: #131A29;
       --card-border: #1E293B;
       --primary: #00D2FF;
+      --primary-glow: rgba(0, 210, 255, 0.12);
       --text: #F8FAFC;
       --text-muted: #94A3B8;
       --success: #10B981;
@@ -47,7 +48,7 @@
 
     header {
       border-bottom: 2px solid var(--primary);
-      padding-bottom: 1.25rem;
+      padding-bottom: 1.5rem;
       margin-bottom: 1.75rem;
     }
 
@@ -61,15 +62,22 @@
     }
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       font-weight: 800;
       letter-spacing: -0.5px;
       color: #FFFFFF;
       margin-bottom: 0.25rem;
     }
 
-    .tagline {
-      font-size: 1.1rem;
+    .slogan {
+      font-size: 1.3rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .powered-by {
+      font-size: 0.95rem;
       color: var(--text-muted);
       font-weight: 500;
     }
@@ -107,6 +115,42 @@
       color: #E2E8F0;
       line-height: 1.6;
       margin-bottom: 1.75rem;
+    }
+
+    /* Architectural Pipeline Diagram */
+    .pipeline-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .pipeline-flow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .pipeline-step {
+      background: rgba(0, 210, 255, 0.08);
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      text-align: center;
+      flex: 1;
+      min-width: 90px;
+    }
+
+    .pipeline-arrow {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 0.9rem;
     }
 
     .grid-2 {
@@ -151,34 +195,45 @@
       font-weight: bold;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
+    /* Stack Architecture List */
+    .stack-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
       margin-bottom: 1.75rem;
+    }
+
+    .stack-row {
       background: var(--card-bg);
-      border-radius: 8px;
-      overflow: hidden;
       border: 1px solid var(--card-border);
-    }
-
-    th, td {
+      border-radius: 6px;
       padding: 0.75rem 1rem;
-      text-align: left;
-      font-size: 0.85rem;
-      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    th {
-      background: rgba(0, 210, 255, 0.08);
-      color: var(--primary);
-      font-weight: 700;
-      text-transform: uppercase;
+    .stack-layer {
       font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
       letter-spacing: 1px;
+      width: 140px;
     }
 
-    td {
-      color: #E2E8F0;
+    .stack-spec {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      font-family: monospace;
+      width: 150px;
+    }
+
+    .stack-desc {
+      font-size: 0.85rem;
+      color: #CBD5E1;
+      flex: 1;
     }
 
     .metrics-bar {
@@ -235,9 +290,10 @@
 
   <div class="container">
     <header>
-      <div class="brand-tag">SYMBEON LABS • REFERENCE PLATFORM</div>
+      <div class="brand-tag">SYMBEON LABS • REFERENCE IMPLEMENTATION</div>
       <h1>Symbeon Mission Control</h1>
-      <p class="tagline">The Computable Organization Platform</p>
+      <div class="slogan">Making Organizations Computable.</div>
+      <div class="powered-by">Powered by the Mission Control Specification (MCS).</div>
     </header>
 
     <div class="hero-img-container">
@@ -246,12 +302,31 @@
 
     <div class="section-title">🚀 Executive Summary</div>
     <div class="exec-summary">
-      <strong>Symbeon Mission Control</strong> is the reference platform for <strong>Computable Organizations</strong>.
+      <strong>Symbeon Mission Control</strong> is the reference platform for <strong>Computable Organizations</strong>, implementing the open <strong>Mission Control Specification (MCS)</strong>.
       <br><br>
       Rather than treating organizations as disconnected tasks, documents, or ticket queues, Mission Control models operational reality as a <strong>Directed Operational Graph</strong> composed of <strong>Operational Objects</strong>, relationships, verifiable evidence, executable policies and institutional knowledge.
       <br><br>
-      Built upon the <strong>Mission Control Specification (MCS)</strong>, the platform transforms operational execution into permanent organizational intelligence through deterministic governance, cryptographic evidence lineage and policy-driven decision making.
-      <p style="margin-top:16px;font-size:1rem;font-weight:700;color:#00D2FF;">Evidence Precedes Truth.</p>
+      The platform transforms operational execution into permanent organizational intelligence through deterministic governance, cryptographic evidence lineage and policy-driven decision making.
+      <p style="margin-top:14px;font-size:1rem;font-weight:700;color:#00D2FF;">Evidence Precedes Truth.</p>
+    </div>
+
+    <div class="section-title">📐 Operational Reality Pipeline</div>
+    <div class="pipeline-container">
+      <div class="pipeline-flow">
+        <div class="pipeline-step">Reality</div>
+        <div class="pipeline-arrow">↓</div>
+        <div class="pipeline-step">Operational Objects</div>
+        <div class="pipeline-arrow">↓</div>
+        <div class="pipeline-step">Evidence</div>
+        <div class="pipeline-arrow">↓</div>
+        <div class="pipeline-step">Knowledge</div>
+        <div class="pipeline-arrow">↓</div>
+        <div class="pipeline-step">Governance</div>
+        <div class="pipeline-arrow">↓</div>
+        <div class="pipeline-step">Agents</div>
+        <div class="pipeline-arrow">↓</div>
+        <div class="pipeline-step">Institutional Memory</div>
+      </div>
     </div>
 
     <div class="section-title">⚡ Problem vs. Solution</div>
@@ -293,43 +368,34 @@
       </div>
     </div>
 
-    <div class="section-title">📚 Mission Control Specification</div>
-    <table>
-      <thead>
-        <tr>
-          <th>Layer</th>
-          <th>Specification</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Scientific Foundation</td>
-          <td><code>MCS-1000</code></td>
-          <td>Computational Organization Theory</td>
-        </tr>
-        <tr>
-          <td>Manifesto</td>
-          <td><code>MCS-0000</code></td>
-          <td>Mission, Philosophy and Normative Axioms</td>
-        </tr>
-        <tr>
-          <td>Normative Specifications</td>
-          <td><code>MCS-0001</code> → <code>MCS-0004</code></td>
-          <td>Architecture, Ontology, State Machine and Protocol</td>
-        </tr>
-        <tr>
-          <td>Domain Specifications</td>
-          <td><code>MCS-0005</code> → <code>MCS-0010</code></td>
-          <td>Evidence, Knowledge, Graph, Governance, Agents and SDK</td>
-        </tr>
-        <tr>
-          <td>Evolution Process</td>
-          <td><code>RFC-0000</code></td>
-          <td>Normative evolution of the specification</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="section-title">📚 Mission Control Specification Stack</div>
+    <div class="stack-container">
+      <div class="stack-row">
+        <div class="stack-layer">Foundation</div>
+        <div class="stack-spec">MCS-1000</div>
+        <div class="stack-desc">Computational Organization Theory</div>
+      </div>
+      <div class="stack-row">
+        <div class="stack-layer">Mission</div>
+        <div class="stack-spec">MCS-0000</div>
+        <div class="stack-desc">Mission, Philosophy and Normative Axioms</div>
+      </div>
+      <div class="stack-row">
+        <div class="stack-layer">Constitution</div>
+        <div class="stack-spec">MCS-0001 → 0004</div>
+        <div class="stack-desc">Architecture Laws, Ontology, State Machine & Protocol</div>
+      </div>
+      <div class="stack-row">
+        <div class="stack-layer">Domain</div>
+        <div class="stack-spec">MCS-0005 → 0010</div>
+        <div class="stack-desc">Evidence, Knowledge, Graph, Governance, Agents & SDK</div>
+      </div>
+      <div class="stack-row">
+        <div class="stack-layer">Evolution</div>
+        <div class="stack-spec">RFC-0000</div>
+        <div class="stack-desc">Normative RFC evolution process</div>
+      </div>
+    </div>
 
     <div class="section-title">🎯 Platform Foundation</div>
     <div class="metrics-bar">
@@ -353,7 +419,7 @@
 
     <footer>
       <strong>Symbeon Mission Control</strong><br>
-      The Reference Platform for Computable Organizations<br><br>
+      The Reference Implementation for Computable Organizations<br><br>
       Powered by the Mission Control Specification (MCS)<br>
       Version 1.0
     </footer>
