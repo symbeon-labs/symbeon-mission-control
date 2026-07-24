@@ -8,6 +8,8 @@
 
 `computable-governance` • `operational-graph` • `evidence-first` • `alm` • `mcp-server` • `rfc2119` • `agentic-governance` • `symbeon-labs`
 
+📄 **[Read the Executive One-Pager (ONE_PAGE.md)](ONE_PAGE.md)** | 📝 **[Read Release v1.0 PR (PULL_REQUEST.md)](PULL_REQUEST.md)**
+
 ---
 
 ## Mission
@@ -310,6 +312,24 @@ Every improvement made while developing GuardDrive must improve Mission Control 
 ## The Mission Control is not software.
 
 **It is the computational representation of how an organization learns, decides, builds and evolves.**
+
+## 📜 Normative Specification Ecosystem (MCS Suite)
+
+| Document | Title | Description |
+| :--- | :--- | :--- |
+| **[MCS-0000](specifications/MCS-0000.md)** | Mission Control Manifesto | The 5 Fundamental Axioms of Computable Reality. |
+| **[MCS-0001](specifications/MCS-0001.md)** | Architecture Specification | Layered Architecture & Chapter 0 (10 Irrevocable Architectural Laws). |
+| **[MCS-0002](specifications/MCS-0002.md)** | Computational Ontology | Formal Entity, Relation, and Event Taxonomies. |
+| **[MCS-0003](specifications/MCS-0003.md)** | Operational State Machine | Formal Lifecycle (`Draft` → `Approved` → `Completed` → `Archived`). |
+| **[MCS-0004](specifications/MCS-0004.md)** | Mission Control Protocol | Semantic Operations Protocol for AI Agents and Systems. |
+| **[MCS-0005](specifications/MCS-0005.md)** | Evidence Specification | $EvidenceScore$ Formula, Trust Model, and Chain of Custody. |
+| **[MCS-0006](specifications/MCS-0006.md)** | Knowledge Specification | Epistemic Evolution Pipeline (`Observation` → `Policy` → `Law`). |
+| **[MCS-0007](specifications/MCS-0007.md)** | Operational Graph Specification | Multi-graph semantics, traversal algorithms, and impact cascades. |
+| **[MCS-0008](specifications/MCS-0008.md)** | Governance Specification | Mathematical Formulations for $GovernanceScore$ and Maturity Model. |
+| **[MCS-0009](specifications/MCS-0009.md)** | Agent Specification | AI Agent Governance (*Agents Observe, Humans Govern*) & `ReasoningChain`. |
+| **[MCS-0010](specifications/MCS-0010.md)** | Extension SDK Specification | Hooks, Event Listeners, and External Evidence Adapters. |
+| **[MCS-1000](specifications/MCS-1000.md)** | Computational Organization Theory | Scientific Foundation Paper. |
+| **[RFC-0000](rfcs/RFC-0000.md)** | Symbeon RFC Process | Formal RFC Lifecycle for Ecosystem Evolution. |
 
 ---
 
