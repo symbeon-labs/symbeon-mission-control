@@ -4,6 +4,8 @@
 
 *Transform every operational action into institutional knowledge.*
 
+![Symbeon Mission Control Hero](docs/images/mission_control_hero.png)
+
 ---
 
 ## Mission
@@ -90,6 +92,47 @@ Every object must display:
 - Outgoing relations
 - Dependency graph
 - Historical graph
+
+### System Architecture & Operational Flow
+
+```mermaid
+flowchart TD
+    subgraph Fleet ["AI Agentic Fleet & Human Operators"]
+        A1["AI Agents (Devin, Gemini, Claude)"]
+        A2["DevOps & CI/CD Pipelines"]
+        A3["Executive / Human Operators"]
+    end
+
+    subgraph Protocol ["Protocol Layer (MCS-0004)"]
+        P1["Native MCP Server (stdio / JSON-RPC 2.0)"]
+    end
+
+    subgraph CoreEngine ["Core Engine & Operational Graph"]
+        G1["GraphManager (Directed Multigraph)"]
+        O1["OperationalObjects (Task, Decision, Evidence)"]
+    end
+
+    subgraph Governance ["Computable Governance Layer"]
+        L1["LiveGovernance Engine"]
+        E1["PolicyEngine (14 Categories)"]
+        M1["MaturityModel (Levels 1 - 5)"]
+        R1["RuleEngine & Evidence Verification"]
+    end
+
+    A1 -->|Semantic Protocol| P1
+    A2 -->|Attach Telemetry| P1
+    A3 -->|Govern & Approve| P1
+
+    P1 -->|Mutate & Query| G1
+    G1 -->|Bind Relations| O1
+    O1 -->|Continuous Evaluation| L1
+
+    L1 --> E1
+    L1 --> M1
+    L1 --> R1
+
+    R1 -. "LAW-0003: Evidence Precedes Truth" .-> O1
+```
 
 ---
 
