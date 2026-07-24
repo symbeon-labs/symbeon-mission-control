@@ -1,10 +1,12 @@
 # Symbeon Mission Control
 
-**Operational Development System**
+**The Computable Governance Operating System**
 
-*Transform every operational action into institutional knowledge.*
+> *Transforms operational actions into traceable, graph-driven institutional memory governed by machine-executable policies.*
 
 ![Symbeon Mission Control Hero](docs/images/mission_control_hero.png)
+
+`computable-governance` • `operational-graph` • `evidence-first` • `alm` • `mcp-server` • `rfc2119` • `agentic-governance` • `symbeon-labs`
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "name": "symbeon-mission-control",
   "version": "0.1.0",
-  "description": "Operational Development System - From Idea to Evidence",
+  "description": "The Computable Governance Operating System & Specification Ecosystem. Transforms operational actions into traceable, graph-driven institutional memory governed by machine-executable policies.",
   "type": "module",
   "main": "index.html",
   "scripts": {
@@ -10,11 +10,20 @@
     "build": "echo 'Build step to be implemented in Phase 2'"
   },
   "keywords": [
-    "operational-development",
-    "governance",
+    "computable-governance",
+    "operational-graph",
+    "institutional-memory",
+    "evidence-first",
+    "alm",
+    "application-lifecycle-management",
+    "mcp",
+    "model-context-protocol",
+    "rfc2119",
+    "normative-specification",
+    "governance-engine",
+    "agentic-governance",
     "traceability",
-    "knowledge-management",
-    "mission-control"
+    "symbeon-labs"
   ],
   "author": "Symbeon Labs",
   "license": "MIT"
