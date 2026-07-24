@@ -4,6 +4,8 @@
  */
 
 import { getNextId, generateId } from './utils/id-generator.js';
+import { GraphManager } from './graph/GraphManager.js';
+import { LiveGovernance } from './governance/LiveGovernance.js';
 
 class MissionControl {
   constructor() {
@@ -15,7 +17,14 @@ class MissionControl {
   }
 
   async init() {
+    this.graphManager = new GraphManager();
+    this.liveGovernance = new LiveGovernance(this.graphManager);
+    
     await this.loadProjectData();
+    
+    const allObjects = this.getAllObjectsArray();
+    this.liveGovernance.initialize(allObjects);
+    
     this.setupEventListeners();
     this.renderModule('dashboard');
   }
@@ -72,6 +81,18 @@ class MissionControl {
       throw new Error(`Failed to load ${path}`);
     }
     return await response.json();
+  }
+
+  getAllObjectsArray() {
+    const objects = [];
+    if (this.data.tasks) this.data.tasks.forEach(t => objects.push({ ...t, type: 'Task' }));
+    if (this.data.milestones) this.data.milestones.forEach(m => objects.push({ ...m, type: 'Milestone' }));
+    if (this.data.decisions) this.data.decisions.forEach(d => objects.push({ ...d, type: 'Decision' }));
+    if (this.data.documents) this.data.documents.forEach(d => objects.push({ ...d, type: 'Document' }));
+    if (this.data.evidence) this.data.evidence.forEach(e => objects.push({ ...e, type: 'Evidence' }));
+    if (this.data.releases) this.data.releases.forEach(r => objects.push({ ...r, type: 'Release' }));
+    if (this.data.risks) this.data.risks.forEach(r => objects.push({ ...r, type: 'Risk' }));
+    return objects;
   }
 
   getEmptyData() {
@@ -191,7 +212,41 @@ class MissionControl {
     const milestoneStats = this.calculateMilestoneStats();
     const decisionStats = this.calculateDecisionStats();
 
+    let governanceHtml = '';
+    if (this.liveGovernance) {
+      const govData = this.liveGovernance.getDashboardData();
+      const scoreColor = govData.overall.score >= 80 ? 'var(--color-success, #28a745)' : (govData.overall.score >= 60 ? 'var(--color-warning, #ffc107)' : 'var(--color-danger, #dc3545)');
+      
+      governanceHtml = `
+      <div class="card" style="margin-bottom: var(--spacing-xl); border-top: 4px solid ${scoreColor};">
+        <div class="card-header">
+          <h2 class="card-title">Live Governance Score</h2>
+          <p class="card-subtitle">Continuous Compliance & Maturity</p>
+        </div>
+        <div class="grid grid-4" style="margin-top: var(--spacing-md);">
+          <div class="stat-card">
+            <div class="stat-value" style="color: ${scoreColor};">${govData.overall.score} <span style="font-size: 0.5em">/ 100</span></div>
+            <div class="stat-label">Governance Grade: <strong>${govData.overall.grade}</strong></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">${govData.overall.maturityLevel}</div>
+            <div class="stat-label">${govData.overall.maturity} Maturity</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" style="color: ${govData.violations.critical > 0 ? 'var(--color-danger, #dc3545)' : 'inherit'};">${govData.violations.unresolved}</div>
+            <div class="stat-label">Unresolved Violations (${govData.violations.critical} Critical)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">${govData.compliance.averageRate}%</div>
+            <div class="stat-label">Policy Compliance</div>
+          </div>
+        </div>
+      </div>
+      `;
+    }
+
     return `
+      ${governanceHtml}
       <div class="grid grid-4" style="margin-bottom: var(--spacing-xl);">
         <div class="stat-card">
           <div class="stat-value">${this.data.tasks.length}</div>
