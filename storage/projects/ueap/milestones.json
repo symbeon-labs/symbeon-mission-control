@@ -1,0 +1,17 @@
+{
+  "milestones": [
+    {
+      "id": "MS-000001",
+      "objective": "UEAP Core Protocol & Cryptographic Proof Engine",
+      "acceptance_criteria": [
+        "Definição do protocolo de atestação criptográfica",
+        "Implementação do engine de proofs",
+        "SDK de integração publicado"
+      ],
+      "status": "completed",
+      "deliverables": ["core/ engine", "proofs/ engine", "sdk/ TypeScript SDK"],
+      "created_at": "2026-02-01T00:00:00Z"
+    }
+  ],
+  "next_id": 2
+}
