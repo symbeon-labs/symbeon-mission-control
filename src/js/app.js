@@ -76,11 +76,15 @@ class MissionControl {
   }
 
   async loadJson(path) {
-    const response = await fetch(path);
-    if (!response.ok) {
-      throw new Error(`Failed to load ${path}`);
+    try {
+      const response = await fetch(path);
+      if (!response.ok) {
+        return {};
+      }
+      return await response.json();
+    } catch {
+      return {};
     }
-    return await response.json();
   }
 
   getAllObjectsArray() {
