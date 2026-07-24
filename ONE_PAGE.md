@@ -4,6 +4,8 @@
 
 > *Transforming operational actions into traceable, graph-driven institutional memory governed by machine-executable policies.*
 
+📥 **[Download PDF Version (Symbeon_Mission_Control_Executive_OnePager.pdf)](docs/pdf/Symbeon_Mission_Control_Executive_OnePager.pdf)**
+
 ---
 
 ## 🚀 Executive Summary

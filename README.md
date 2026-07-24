@@ -8,7 +8,7 @@
 
 `computable-governance` • `operational-graph` • `evidence-first` • `alm` • `mcp-server` • `rfc2119` • `agentic-governance` • `symbeon-labs`
 
-📄 **[Read the Executive One-Pager (ONE_PAGE.md)](ONE_PAGE.md)** | 📝 **[Read Release v1.0 PR (PULL_REQUEST.md)](PULL_REQUEST.md)**
+📄 **[Read the Executive One-Pager (ONE_PAGE.md)](ONE_PAGE.md)** | 📥 **[Download Executive PDF (Symbeon_Mission_Control_Executive_OnePager.pdf)](docs/pdf/Symbeon_Mission_Control_Executive_OnePager.pdf)** | 📝 **[Read Release v1.0 PR (PULL_REQUEST.md)](PULL_REQUEST.md)**
 
 ---
 
