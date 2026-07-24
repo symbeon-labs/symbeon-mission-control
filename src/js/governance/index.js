@@ -11,6 +11,7 @@ export { RecommendationEngine } from './RecommendationEngine.js';
 export { MaturityModel } from './MaturityModel.js';
 export { AuditEngine } from './AuditEngine.js';
 export { LiveGovernance } from './LiveGovernance.js';
+export { ReasoningChain } from './ReasoningChain.js';
 
 export default {
   Policy,
@@ -20,5 +21,6 @@ export default {
   RecommendationEngine,
   MaturityModel,
   AuditEngine,
-  LiveGovernance
+  LiveGovernance,
+  ReasoningChain
 };

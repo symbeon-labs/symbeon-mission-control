@@ -11,6 +11,7 @@ import { fileURLToPath } from 'url';
 
 import { GraphManager } from '../src/js/graph/GraphManager.js';
 import { LiveGovernance } from '../src/js/governance/LiveGovernance.js';
+import { ReasoningChain } from '../src/js/governance/ReasoningChain.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -127,6 +128,22 @@ const TOOLS = [
       },
       required: ['targetObjectId', 'evidenceType', 'title']
     }
+  },
+  {
+    name: 'mc_submit_reasoning_chain',
+    description: 'Registers an auditable AI Chain of Thought for a critical decision or action (Enforces LAW-0008 & MCS-0009).',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        agentId: { type: 'string', description: 'ID or Name of the AI Agent' },
+        targetDecisionId: { type: 'string', description: 'ID of the decision being evaluated' },
+        premises: { type: 'array', items: { type: 'string' }, description: 'Observed premises and facts' },
+        steps: { type: 'array', items: { type: 'object' }, description: 'Deduction steps' },
+        conclusion: { type: 'string', description: 'Final deduction or recommendation' },
+        confidenceScore: { type: 'number', description: 'Confidence rating (0-100)' }
+      },
+      required: ['agentId', 'targetDecisionId', 'conclusion']
+    }
   }
 ];
 
@@ -184,6 +201,19 @@ function handleToolCall(name, args) {
       );
       liveGovernance.onGraphModified(relation.id, 'create', 'Agent');
       return { content: [{ type: 'text', text: JSON.stringify({ message: 'Evidence attached and verified', evidenceId, relation }, null, 2) }] };
+    }
+    case 'mc_submit_reasoning_chain': {
+      const chain = new ReasoningChain({
+        id: `ROC-${Date.now().toString().slice(-4)}`,
+        agentId: args.agentId,
+        targetDecisionId: args.targetDecisionId,
+        premises: args.premises || [],
+        steps: args.steps || [],
+        conclusion: args.conclusion,
+        confidenceScore: args.confidenceScore || 90
+      });
+      liveGovernance.onObjectModified(chain.id, 'ReasoningChain', args.agentId);
+      return { content: [{ type: 'text', text: JSON.stringify({ message: 'Reasoning chain registered & audited', chain: chain.toJSON() }, null, 2) }] };
     }
     default:
       throw new Error(`Unknown tool: ${name}`);
