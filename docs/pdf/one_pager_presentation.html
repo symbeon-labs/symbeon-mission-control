@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symbeon Mission Control — Executive One-Pager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0B0F17;
+      --card-bg: #131A29;
+      --card-border: #1E293B;
+      --primary: #00D2FF;
+      --primary-glow: rgba(0, 210, 255, 0.15);
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --success: #10B981;
+      --warning: #F59E0B;
+      --accent: #6366F1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .container {
+      background: var(--bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .brand-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .hero-img-container {
+      width: 100%;
+      margin: 1.5rem 0 2rem 0;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+    }
+
+    .hero-img-container img {
+      width: 100%;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .exec-summary {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-left: 4px solid var(--primary);
+      padding: 1.25rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: #E2E8F0;
+      margin-bottom: 2rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 1.25rem;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #FFFFFF;
+    }
+
+    .card ul {
+      list-style: none;
+    }
+
+    .card li {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .card li::before {
+      content: "•";
+      color: var(--primary);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      background: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+    }
+
+    th, td {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      font-size: 0.85rem;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    th {
+      background: rgba(0, 210, 255, 0.08);
+      color: var(--primary);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+    }
+
+    td {
+      color: #E2E8F0;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .badge-primary { background: rgba(0, 210, 255, 0.15); color: var(--primary); }
+    .badge-success { background: rgba(16, 185, 129, 0.15); color: var(--success); }
+
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--primary);
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .metric-value {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .metric-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: #0B0F17;
+      }
+      .container {
+        border: none;
+        box-shadow: none;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="brand-tag">SYMBEON LABS • SPECIFICATION ECOSYSTEM</div>
+      <h1>Symbeon Mission Control</h1>
+      <p class="tagline">The Computable Governance Operating System & Agentic ALM Framework</p>
+    </header>
+
+    <div class="hero-img-container">
+      <img src="../images/mission_control_hero.png" alt="Symbeon Mission Control Banner">
+    </div>
+
+    <div class="section-title">🚀 Executive Summary</div>
+    <div class="exec-summary">
+      <strong>Symbeon Mission Control</strong> is a next-generation <strong>Computable Governance Operating System (OS)</strong> and <strong>Agentic Application Lifecycle Management (ALM) Framework</strong>. Unlike traditional tools that treat software development as flat expiring ticket lists, Mission Control models the enterprise as a <strong>Directed Multigraph</strong> of Operational Objects. It replaces passive PDF governance with <strong>machine-executable policies</strong> evaluated in real time, enforcing strict evidence traceability (<i>"Evidence Precedes Truth"</i>), calculating organizational maturity deterministically (Levels 1–5), and providing a native <strong>Model Context Protocol (MCP)</strong> hub for AI Agent fleets.
+    </div>
+
+    <div class="section-title">⚡ Problem vs. Solution</div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Traditional ALM & Project Management</h3>
+        <ul>
+          <li><strong>Information Decay:</strong> Tasks expire; decision context is lost after months.</li>
+          <li><strong>Passive PDF Governance:</strong> Unread policy PDFs audited retroactively after failures.</li>
+          <li><strong>Unchecked AI Execution:</strong> AI Agents execute changes without auditable proof.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="border-color: var(--primary);">
+        <h3>Symbeon Mission Control OS</h3>
+        <ul>
+          <li><strong>Immutable Graph Memory:</strong> Retains full historical lineage and topological ties.</li>
+          <li><strong>Executable Policies:</strong> LiveGovernance evaluates 14 policy categories in real time.</li>
+          <li><strong>AI Reasoning Chains:</strong> Agents MUST log cryptographic ReasoningChain before action.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-title">🏛️ Specification Suite (MCS Normative Family)</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Family</th>
+          <th>Specifications</th>
+          <th>Normative Focus & Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="badge badge-primary">📜 Constitution</span></td>
+          <td><code>MCS-0000</code> – <code>MCS-0004</code></td>
+          <td>Manifesto, 10 Architectural Laws (Ch. 0), Computational Ontology, State Machine, and Semantic MCP Protocol. Bound by IETF RFC 2119.</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-success">⚙️ Domain Specs</span></td>
+          <td><code>MCS-0005</code> – <code>MCS-0010</code></td>
+          <td>Evidence Protocol (<i>EvidenceScore</i>), Epistemic Knowledge Cycle, Operational Graph Traversal, Governance Math, Agent Boundaries, Extension SDK.</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-primary">🔬 Science & Process</span></td>
+          <td><code>MCS-1000</code> & <code>RFC-0000</code></td>
+          <td>Computational Organization Theory (Scientific Paper) & Symbeon RFC Governance Process.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-title">🎯 Performance & Maturity Metrics</div>
+    <div class="metrics-bar">
+      <div class="metric-card">
+        <div class="metric-value" style="color: var(--success);">95 / 100</div>
+        <div class="metric-label">Governance Score (A+)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" style="color: var(--primary);">Level 5</div>
+        <div class="metric-label">Maturity (Optimized)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" style="color: var(--warning);">100%</div>
+        <div class="metric-label">Evidence Coverage</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" style="color: var(--success);">Enforced</div>
+        <div class="metric-label">LAW-0008 Agent Safety</div>
+      </div>
+    </div>
+
+    <footer>
+      <strong>Symbeon Mission Control v1.0.0</strong> | Symbeon Labs Architecture Team | 
+      <a href="https://github.com/symbeon-labs/symbeon-mission-control" style="color: var(--primary); text-decoration: none;">github.com/symbeon-labs/symbeon-mission-control</a>
+    </footer>
+  </div>
+
+</body>
+</html>
