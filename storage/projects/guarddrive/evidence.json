@@ -139,7 +139,27 @@
       "status": "verified",
       "confidenceScore": 100,
       "created_at": "2026-07-24T15:15:00Z"
+    },
+    {
+      "id": "EVD-000015",
+      "title": "AOA Core Manifesto de Soberania Óptica",
+      "type": "Document",
+      "sourceUrl": "guarddrive/aoa-core/README.md",
+      "targetObjectId": "TASK-000014",
+      "status": "verified",
+      "confidenceScore": 100,
+      "created_at": "2026-07-24T15:25:00Z"
+    },
+    {
+      "id": "EVD-000016",
+      "title": "AOA Quick Validation Engine (PoPE Proof)",
+      "type": "Document",
+      "sourceUrl": "guarddrive/aoa-core/quick_validation.py",
+      "targetObjectId": "TASK-000014",
+      "status": "verified",
+      "confidenceScore": 100,
+      "created_at": "2026-07-24T15:25:00Z"
     }
   ],
-  "next_id": 15
+  "next_id": 17
 }

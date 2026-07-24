@@ -176,7 +176,26 @@
       "target_date": "2026-10-30T00:00:00Z",
       "status": "in_progress",
       "created_at": "2026-07-24T15:15:00Z"
+    },
+    {
+      "id": "MS-000010",
+      "objective": "AOA Core - Atomic Optical Signature Protocol (PoPE Engine)",
+      "acceptance_criteria": [
+        "Manifesto de Soberania Óptica formalizado",
+        "Especificação DTM & Janela de Interferência Espectral (850nm-940nm)",
+        "Rede de inferência Edge & Validação PoPE (Proof of Physical Evidence)"
+      ],
+      "dependencies": ["MS-000004"],
+      "documents": ["DOC-000009"],
+      "evidence": ["EVD-000015", "EVD-000016"],
+      "deliverables": [
+        "aoa-core optical engine",
+        "quick_validation.py"
+      ],
+      "target_date": "2026-11-15T00:00:00Z",
+      "status": "in_progress",
+      "created_at": "2026-07-24T15:25:00Z"
     }
   ],
-  "next_id": 10
+  "next_id": 11
 }
