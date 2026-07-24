@@ -38,7 +38,7 @@
     {
       "id": "TASK-000007",
       "title": "GuardDrive Advanced Landing & Positioning Portal",
-      "status": "in_progress",
+      "status": "completed",
       "responsible": "joao",
       "category": "commercial",
       "dependencies": ["TASK-000001"],
@@ -71,7 +71,43 @@
       "date": "2026-07-24T12:00:00Z",
       "impact": "high",
       "created_at": "2026-07-24T12:00:00Z"
+    },
+    {
+      "id": "TASK-000009",
+      "title": "GuardDrive Intelligence Hub Command Center",
+      "status": "in_progress",
+      "responsible": "joao",
+      "category": "analytics",
+      "dependencies": ["TASK-000007"],
+      "checklist": [
+        { "item": "Estruturar ESCOPO_EXECUCAO.md", "completed": true },
+        { "item": "Configurar schema de banco de dados e backend analítico", "completed": true },
+        { "item": "Desenvolver frontend de Inteligência e Comando", "completed": true }
+      ],
+      "documents": ["DOC-000004"],
+      "milestone": "MS-000005",
+      "date": "2026-07-24T15:00:00Z",
+      "impact": "high",
+      "created_at": "2026-07-24T15:00:00Z"
+    },
+    {
+      "id": "TASK-000010",
+      "title": "City Twin Digital Simulation Engine (Salvador)",
+      "status": "in_progress",
+      "responsible": "joao",
+      "category": "simulation",
+      "dependencies": ["TASK-000009"],
+      "checklist": [
+        { "item": "Desenvolver runner de simulação run_simulation.ts", "completed": true },
+        { "item": "Gerar e validar dataset de mobilidade de Salvador", "completed": true },
+        { "item": "Integrar atestação L2/L4 ao simulador", "completed": true }
+      ],
+      "documents": ["DOC-000005"],
+      "milestone": "MS-000006",
+      "date": "2026-07-24T15:00:00Z",
+      "impact": "high",
+      "created_at": "2026-07-24T15:00:00Z"
     }
   ],
-  "next_id": 9
+  "next_id": 11
 }

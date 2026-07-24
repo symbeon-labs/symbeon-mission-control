@@ -60,7 +60,7 @@
         "sovereign_positioning_report.md"
       ],
       "target_date": "2026-07-31T00:00:00Z",
-      "status": "in_progress",
+      "status": "completed",
       "created_at": "2026-07-24T12:00:00Z"
     },
     {
@@ -81,7 +81,45 @@
       "target_date": "2026-08-15T00:00:00Z",
       "status": "in_progress",
       "created_at": "2026-07-24T12:00:00Z"
+    },
+    {
+      "id": "MS-000005",
+      "objective": "GuardDrive Intelligence Hub & Executive Command Center",
+      "acceptance_criteria": [
+        "Escopo de Execução formalizado",
+        "Database schema & Backend de inteligência operacionais",
+        "Dashboard analítico de telemetria ativo"
+      ],
+      "dependencies": ["MS-000003"],
+      "documents": ["DOC-000004"],
+      "evidence": ["EVD-000005", "EVD-000006"],
+      "deliverables": [
+        "guarddrive-intelligence-hub portal",
+        "ESCOPO_EXECUCAO.md"
+      ],
+      "target_date": "2026-08-30T00:00:00Z",
+      "status": "in_progress",
+      "created_at": "2026-07-24T15:00:00Z"
+    },
+    {
+      "id": "MS-000006",
+      "objective": "City Twin Digital Simulation Engine (Salvador Urban Mobility)",
+      "acceptance_criteria": [
+        "Engine de simulação de mobilidade urbana (run_simulation.ts)",
+        "Dataset de simulação de Salvador (salvador_simulation_data.json)",
+        "Atestação de telemetria L2/L4 integrada"
+      ],
+      "dependencies": ["MS-000005"],
+      "documents": ["DOC-000005"],
+      "evidence": ["EVD-000007", "EVD-000008"],
+      "deliverables": [
+        "city-twin-engine TypeScript runner",
+        "salvador_simulation_data.json"
+      ],
+      "target_date": "2026-09-15T00:00:00Z",
+      "status": "in_progress",
+      "created_at": "2026-07-24T15:00:00Z"
     }
   ],
-  "next_id": 5
+  "next_id": 7
 }
