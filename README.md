@@ -1,8 +1,8 @@
 # Symbeon Mission Control
 
-**The Computable Governance Operating System**
+**The Computable Organization Platform**
 
-> *Transforms operational actions into traceable, graph-driven institutional memory governed by machine-executable policies.*
+> *The Reference Platform for Computable Organizations powered by the Mission Control Specification (MCS).*
 
 ![Symbeon Mission Control Hero](docs/images/mission_control_hero.png)
 
