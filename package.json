@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "npx serve . -p 3000",
     "mcp": "node mcp-server/index.js",
-    "build": "echo 'Build step to be implemented in Phase 2'"
+    "build": "echo 'Static Vercel Build Ready'"
   },
   "keywords": [
     "computable-governance",
