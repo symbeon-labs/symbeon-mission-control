@@ -2,9 +2,11 @@
   "name": "symbeon-mission-control",
   "version": "0.1.0",
   "description": "Operational Development System - From Idea to Evidence",
+  "type": "module",
   "main": "index.html",
   "scripts": {
     "dev": "npx serve . -p 3000",
+    "mcp": "node mcp-server/index.js",
     "build": "echo 'Build step to be implemented in Phase 2'"
   },
   "keywords": [
