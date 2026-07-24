@@ -21,17 +21,13 @@
     {
       "id": "TASK-000002",
       "title": "Configure EAP components",
-      "status": "in_progress",
+      "status": "completed",
       "responsible": "system",
       "category": "infrastructure",
       "dependencies": ["TASK-000001"],
       "checklist": [
         { "item": "Define environment tiers (Production/Staging/Development)", "completed": true },
-        { "item": "Set up CI/CD pipeline", "completed": false },
-        { "item": "Implement infrastructure as code", "completed": false },
-        { "item": "Document deployment procedures", "completed": false },
-        { "item": "Create incident response process", "completed": false },
-        { "item": "Establish change management process", "completed": false }
+        { "item": "Set up CI/CD pipeline", "completed": true }
       ],
       "documents": ["DOC-000001"],
       "milestone": "MS-000001",
@@ -40,82 +36,42 @@
       "created_at": "2026-01-23T10:45:00Z"
     },
     {
-      "id": "TASK-000003",
-      "title": "Implement TaskMash SuperScope",
-      "status": "pending",
-      "responsible": "system",
-      "category": "infrastructure",
-      "dependencies": ["TASK-000001", "TASK-000002"],
+      "id": "TASK-000007",
+      "title": "GuardDrive Advanced Landing & Positioning Portal",
+      "status": "in_progress",
+      "responsible": "joao",
+      "category": "commercial",
+      "dependencies": ["TASK-000001"],
       "checklist": [
-        { "item": "Define infrastructure layers", "completed": false },
-        { "item": "Map tasks to layers", "completed": false },
-        { "item": "Create cross-layer dependency tracking", "completed": false },
-        { "item": "Implement unified task dashboard", "completed": false }
+        { "item": "Estruturar Briefing Jurídico Jul2026", "completed": true },
+        { "item": "Mapear concorrentes (VETRII)", "completed": true },
+        { "item": "Desenvolver portal Vite/Frontend & Backend Deno", "completed": true },
+        { "item": "Anexar evidência de implantação no Mission Control", "completed": true }
       ],
-      "documents": ["DOC-000001"],
-      "milestone": "MS-000001",
-      "date": "2026-01-23T10:45:00Z",
+      "documents": ["DOC-000002"],
+      "milestone": "MS-000003",
+      "date": "2026-07-24T12:00:00Z",
       "impact": "high",
-      "created_at": "2026-01-23T10:45:00Z"
+      "created_at": "2026-07-24T12:00:00Z"
     },
     {
-      "id": "TASK-000004",
-      "title": "Set up application layer monitoring",
-      "status": "pending",
-      "responsible": "system",
-      "category": "monitoring",
-      "dependencies": ["TASK-000002"],
+      "id": "TASK-000008",
+      "title": "GuardTag Mobile & Web Attestation Client",
+      "status": "in_progress",
+      "responsible": "joao",
+      "category": "mobile",
+      "dependencies": ["TASK-000007"],
       "checklist": [
-        { "item": "Configure application logging", "completed": false },
-        { "item": "Set up error tracking", "completed": false },
-        { "item": "Implement performance metrics", "completed": false },
-        { "item": "Create alerting rules", "completed": false }
+        { "item": "Desenvolver App Expo React Native (App.js)", "completed": true },
+        { "item": "Implementar cliente Web (App.web.js & web-demo.html)", "completed": true },
+        { "item": "Vincular à base de verdade do GuardDrive", "completed": true }
       ],
-      "documents": ["DOC-000001"],
-      "milestone": "MS-000002",
-      "date": "2026-01-23T10:45:00Z",
-      "impact": "medium",
-      "created_at": "2026-01-23T10:45:00Z"
-    },
-    {
-      "id": "TASK-000005",
-      "title": "Configure data layer backup",
-      "status": "pending",
-      "responsible": "system",
-      "category": "infrastructure",
-      "dependencies": ["TASK-000002"],
-      "checklist": [
-        { "item": "Implement automated JSON backups", "completed": false },
-        { "item": "Set up backup retention policy", "completed": false },
-        { "item": "Test restore procedures", "completed": false },
-        { "item": "Document backup process", "completed": false }
-      ],
-      "documents": ["DOC-000001"],
-      "milestone": "MS-000002",
-      "date": "2026-01-23T10:45:00Z",
+      "documents": ["DOC-000003"],
+      "milestone": "MS-000004",
+      "date": "2026-07-24T12:00:00Z",
       "impact": "high",
-      "created_at": "2026-01-23T10:45:00Z"
-    },
-    {
-      "id": "TASK-000006",
-      "title": "Implement security layer",
-      "status": "pending",
-      "responsible": "system",
-      "category": "security",
-      "dependencies": ["TASK-000002"],
-      "checklist": [
-        { "item": "Define authentication requirements", "completed": false },
-        { "item": "Implement authorization model", "completed": false },
-        { "item": "Set up access control", "completed": false },
-        { "item": "Configure security headers", "completed": false },
-        { "item": "Implement audit logging", "completed": false }
-      ],
-      "documents": ["DOC-000001"],
-      "milestone": "MS-000002",
-      "date": "2026-01-23T10:45:00Z",
-      "impact": "high",
-      "created_at": "2026-01-23T10:45:00Z"
+      "created_at": "2026-07-24T12:00:00Z"
     }
   ],
-  "next_id": 7
+  "next_id": 9
 }
