@@ -2,49 +2,41 @@
 
 **Making Organizations Computable.**
 
-> *The Reference Implementation for Computable Organizations powered by the Mission Control Specification (MCS).*
+> *A reference implementation for the Mission Control Specification (MCS).*
 
-![Symbeon Mission Control Hero](docs/images/mission_control_hero.png)
+![Symbeon Mission Control](docs/images/mission_control_hero.png)
 
-`computable-governance` • `operational-graph` • `evidence-first` • `alm` • `mcp-server` • `rfc2119` • `agentic-governance` • `symbeon-labs`
-
-📄 **[Read the Executive One-Pager (ONE_PAGE.md)](ONE_PAGE.md)** | 📥 **[Download Executive PDF (Symbeon_Mission_Control_Executive_OnePager.pdf)](docs/pdf/Symbeon_Mission_Control_Executive_OnePager.pdf)** | 📝 **[Read Release v1.0 PR (PULL_REQUEST.md)](PULL_REQUEST.md)**
+`reference-implementation` • `computable-organization` • `operational-graph` • `evidence-first` • `agentic-governance` • `symbeon-labs`
 
 ---
 
-## Mission
+## What this is
 
-Transform every operational action into institutional knowledge.
+**Symbeon Mission Control** is a research and engineering implementation of the ideas defined in the **Mission Control Specification (MCS)**.
 
-Every action must become:
+It explores how an organization can represent operational objects, decisions, evidence, dependencies, governance, knowledge, and history as one connected operational system.
 
-**Decision → Evidence → Knowledge → Governance → History → Institutional Asset**
+The central idea is:
 
-The Mission Control must become the operating system that manages the complete lifecycle of complex technology projects.
+**Decision → Evidence → Knowledge → Governance → History → Institutional Memory**
 
-**Projects are not collections of tasks. Projects are living operational systems.**
-
-The Mission Control is responsible for documenting their evolution.
+Projects are treated as living operational systems rather than isolated lists of tasks.
 
 ---
 
-## Core Principle
+## Core principle
 
-**Nothing exists until evidence exists.**
+> **Operational state should be traceable to evidence.**
 
-Every operational action must generate at least one evidence object.
+Mission Control is designed so that important actions and decisions can be connected to the evidence, relationships, history, and knowledge surrounding them.
 
-**Meeting → Minutes → Decision → Task → Milestone → Document → Release → Historical Record**
-
-If this chain is broken, the system is incomplete.
+This is a design goal, not a claim that every system state is automatically true or complete.
 
 ---
 
-## Information Model
+## Information model
 
-### OperationalObject Base Structure
-
-Every object in the system inherits the same foundation:
+The system uses a shared operational-object foundation:
 
 ```javascript
 OperationalObject {
@@ -65,7 +57,8 @@ OperationalObject {
 }
 ```
 
-All modules extend this base object:
+Objects can include:
+
 - Task
 - Decision
 - Evidence
@@ -78,266 +71,146 @@ All modules extend this base object:
 - Stakeholder
 - Knowledge
 
+The graph connects these objects so their dependencies, provenance, and history can be inspected together.
+
 ---
 
-## Graph-Based Architecture
+## Architecture
 
-Objects do not live isolated. Everything is connected.
+At a high level:
 
-**Decision** creates **Task**  
-**Task** belongs to **Milestone**  
-**Milestone** belongs to **Release**  
-**Release** contains **Evidence**  
-**Evidence** references **Document**  
-**Document** references **Decision**
-
-Every object must display:
-- Incoming relations
-- Outgoing relations
-- Dependency graph
-- Historical graph
-
-### System Architecture & Operational Flow
-
-```mermaid
-flowchart TD
-    subgraph Fleet ["AI Agentic Fleet & Human Operators"]
-        A1["AI Agents (Devin, Gemini, Claude)"]
-        A2["DevOps & CI/CD Pipelines"]
-        A3["Executive / Human Operators"]
-    end
-
-    subgraph Protocol ["Protocol Layer (MCS-0004)"]
-        P1["Native MCP Server (stdio / JSON-RPC 2.0)"]
-    end
-
-    subgraph CoreEngine ["Core Engine & Operational Graph"]
-        G1["GraphManager (Directed Multigraph)"]
-        O1["OperationalObjects (Task, Decision, Evidence)"]
-    end
-
-    subgraph Governance ["Computable Governance Layer"]
-        L1["LiveGovernance Engine"]
-        E1["PolicyEngine (14 Categories)"]
-        M1["MaturityModel (Levels 1 - 5)"]
-        R1["RuleEngine & Evidence Verification"]
-    end
-
-    A1 -->|Semantic Protocol| P1
-    A2 -->|Attach Telemetry| P1
-    A3 -->|Govern & Approve| P1
-
-    P1 -->|Mutate & Query| G1
-    G1 -->|Bind Relations| O1
-    O1 -->|Continuous Evaluation| L1
-
-    L1 --> E1
-    L1 --> M1
-    L1 --> R1
-
-    R1 -. "LAW-0003: Evidence Precedes Truth" .-> O1
+```text
+Human Operators + AI Agents + Operational Systems
+                    ↓
+             MCS / MCP boundary
+                    ↓
+          Operational Graph + Objects
+                    ↓
+        Evidence + Governance + Knowledge
+                    ↓
+             Institutional Memory
 ```
 
----
-
-## Navigation Structure
-
-Navigation represents how organizations operate, not how databases store data.
-
-- **Mission** - Organizational mission and vision
-- **Projects** - Living operational systems
-- **Operations** - Day-to-day operational actions
-- **Governance** - Decision making and approvals
-- **Knowledge** - Captured institutional learning
-- **Evidence** - All evidence objects
-- **Analytics** - Organizational maturity metrics
-- **Administration** - System configuration
+The implementation investigates how agentic systems can operate against structured organizational state without removing explicit governance boundaries.
 
 ---
 
-## Project Health
+## Operational flow
 
-Dashboard measures organizational maturity, not object counts.
+A typical lifecycle can connect:
 
-**Indicators:**
-- Governance
-- Commercial
-- Product
-- Knowledge
-- Evidence
-- Documentation
-- Execution
-- Validation
-- Risk
+**Meeting → Decision → Task → Milestone → Release → Evidence → Historical Record**
 
-Each indicator is automatically calculated from operational data.
+The exact flow depends on the operation being represented.
+
+The purpose is to reduce fragmented operational memory and make important relationships inspectable.
 
 ---
 
-## Timeline as Institutional Memory
+## Evidence
 
-Timeline is not a log. Timeline is institutional memory.
+Evidence is a first-class object.
 
-Every event receives:
-- Timestamp
-- Actor
-- Related Objects
-- Evidence
-- Impact
-- Category
+Possible evidence sources include:
 
-Timeline becomes the history of the company.
+- documents
+- meetings
+- contracts
+- images
+- commits
+- pull requests
+- deployments
+- videos
+- presentations
+- PDFs
+- releases
 
----
-
-## Evidence Engine
-
-Evidence is the heart of the platform.
-
-**Evidence Types:**
-- Document
-- Meeting
-- Contract
-- Image
-- Commit
-- Pull Request
-- Deployment
-- Video
-- Presentation
-- PDF
-- Release
-
-Evidence must always point to operational objects.
+The system records relationships between evidence and operational objects so that decisions and actions can be investigated later.
 
 ---
 
-## Knowledge Engine
+## Knowledge and institutional memory
 
-Every completed task asks: **What was learned?**
+Completed work can produce explicit knowledge.
 
-Knowledge becomes searchable.
-Knowledge generates templates.
-Templates improve future projects.
-Projects improve the framework.
-The framework improves future projects.
+That knowledge can become:
 
----
+- searchable institutional memory
+- reusable templates
+- operating rules
+- future decision context
+- evidence for subsequent interventions
 
-## Automatic Reports
+The intended feedback loop is:
 
-Generated directly from operational data:
-
-- Executive Snapshot
-- Weekly Report
-- Monthly Report
-- Baseline Report
-- Risk Report
-- Governance Report
-- Commercial Report
-- Knowledge Report
-- Deployment Report
+**Operation → Evidence → Knowledge → Future Operation**
 
 ---
 
-## Automation
+## Reference to MCS
 
-**Creating a Decision automatically suggests:**
-- Task
-- Milestone
-- Timeline Event
-- Evidence
-- Release
+The implementation is developed alongside the open MCS specification:
 
-**Creating a Meeting automatically suggests:**
-- Minutes
-- Decision
-- Knowledge
-- Evidence
+**[Mission Control Specification](https://github.com/symbeon-labs/mission-control-specification)**
 
-Nothing should require repetitive work.
+MCS defines the conceptual and normative layer.
+
+Mission Control provides an executable implementation surface through which those ideas can be tested.
 
 ---
 
-## User Experience
+## Current status
 
-The user should feel like operating a Mission Control, not filling forms.
+**Research / reference implementation — evolving.**
 
-- Reduce clicks
-- Reduce friction
-- Increase contextual information
-- Show relations instead of lists
+The repository is not presented as a finished enterprise operating system or universal governance solution.
 
----
+Its value is in making the computational model executable, testable, inspectable, and subject to evidence from real operational use.
 
-## Long-Term Goal
+Current development areas include:
 
-The Mission Control must become the operational memory of the organization.
-
-The software should answer instantly:
-- Why was this built?
-- Who approved it?
-- Which decision created it?
-- Which evidence proves it?
-- Which release delivered it?
-- Which project uses it?
-- Which knowledge emerged?
+- operational graph
+- evidence and provenance
+- governance mechanisms
+- knowledge capture
+- agent interfaces
+- automation
+- reporting
+- interoperability
 
 ---
 
-## Dogfooding
+## Relationship to Symbeon Labs
 
-GuardDrive remains Project Zero.
+Mission Control is one technical expression of Symbeon's broader research into **Computable Organizations**.
 
-Every improvement made while developing GuardDrive must improve Mission Control itself.
+The institutional method is:
 
-**Mission Control is the product. GuardDrive is its first operational experiment.**
+**Observe → Map → Evidence → Model → Intervene → Measure → Learn**
 
----
-
-## Non-Negotiable Principles
-
-1. **Evidence First** - Nothing exists until evidence exists
-2. **Governance by Design** - Governance incorporated from the start
-3. **Operational Traceability** - Complete traceability of all actions
-4. **Institutional Memory** - Permanent institutional memory
-5. **Knowledge as an Asset** - Knowledge treated as institutional asset
-6. **Decision Logging** - Systematic decision recording
-7. **Graph Relationships** - Everything is connected
-8. **Automation First** - Automate repetitive work
-9. **Operational Simplicity** - Reduce friction
-10. **Long-term Scalability** - Optimize for operational intelligence
+The implementation is expected to evolve as operational evidence and research findings accumulate.
 
 ---
 
-## The Mission Control is not software.
+## What this is not
 
-**It is the computational representation of how an organization learns, decides, builds and evolves.**
+Mission Control is not:
 
-## 📜 Normative Specification Ecosystem (MCS Suite)
-
-| Document | Title | Description |
-| :--- | :--- | :--- |
-| **[MCS-0000](specifications/MCS-0000.md)** | Mission Control Manifesto | The 5 Fundamental Axioms of Computable Reality. |
-| **[MCS-0001](specifications/MCS-0001.md)** | Architecture Specification | Layered Architecture & Chapter 0 (10 Irrevocable Architectural Laws). |
-| **[MCS-0002](specifications/MCS-0002.md)** | Computational Ontology | Formal Entity, Relation, and Event Taxonomies. |
-| **[MCS-0003](specifications/MCS-0003.md)** | Operational State Machine | Formal Lifecycle (`Draft` → `Approved` → `Completed` → `Archived`). |
-| **[MCS-0004](specifications/MCS-0004.md)** | Mission Control Protocol | Semantic Operations Protocol for AI Agents and Systems. |
-| **[MCS-0005](specifications/MCS-0005.md)** | Evidence Specification | $EvidenceScore$ Formula, Trust Model, and Chain of Custody. |
-| **[MCS-0006](specifications/MCS-0006.md)** | Knowledge Specification | Epistemic Evolution Pipeline (`Observation` → `Policy` → `Law`). |
-| **[MCS-0007](specifications/MCS-0007.md)** | Operational Graph Specification | Multi-graph semantics, traversal algorithms, and impact cascades. |
-| **[MCS-0008](specifications/MCS-0008.md)** | Governance Specification | Mathematical Formulations for $GovernanceScore$ and Maturity Model. |
-| **[MCS-0009](specifications/MCS-0009.md)** | Agent Specification | AI Agent Governance (*Agents Observe, Humans Govern*) & `ReasoningChain`. |
-| **[MCS-0010](specifications/MCS-0010.md)** | Extension SDK Specification | Hooks, Event Listeners, and External Evidence Adapters. |
-| **[MCS-1000](specifications/MCS-1000.md)** | Computational Organization Theory | Scientific Foundation Paper. |
-| **[RFC-0000](rfcs/RFC-0000.md)** | Symbeon RFC Process | Formal RFC Lifecycle for Ecosystem Evolution. |
+- a claim that all organizational reality can be fully automated
+- a replacement for every ERP or enterprise system
+- a guarantee of truth from AI output
+- a finished universal standard by itself
+- a substitute for human governance
 
 ---
 
-## Roadmap & Status
+## Research principle
 
-✅ **Phase 1: Foundation** - Basic static UI, project storage, and JSON flat loading.
-✅ **Phase 2: Architectural Evolution** - Implementation of `OperationalObject` base class for strict data consistency.
-✅ **Phase 3: Operational Graph Engine** - Implementation of `GraphManager` for relationship indexing, dependency traversal, and impact analysis.
-✅ **Phase 4: Computable Governance** - Implementation of `PolicyEngine`, continuous compliance scoring, Maturity Model, and the `LiveGovernance` dashboard widget.
-✅ **Phase 5: Agentic Hub & MCP** - Built native Model Context Protocol (MCP) Server in `mcp-server/index.js` implementing `MCS-0004` semantic operations for AI agents.
-🚧 **Phase 6: External Integrations & Deep Analytics** - Automatic hooks to GitHub/Jira to create evidence objects on commits/PRs, and deep graph visualization rendering.
+> **Evidence before intervention.**
+
+The system should make it possible to understand what happened, why it happened, what evidence supports it, and what was learned.
+
+---
+
+**Symbeon Labs**  
+*Applied Research for Computable Organizations.*
